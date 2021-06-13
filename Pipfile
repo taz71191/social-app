@@ -1,0 +1,56 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+black = "*"
+fabric = "*"
+jupyterlab = "*"
+nb_black = "*"
+matplotlib = "*"
+bandit = "*"
+flake8 = "*"
+pre-commit = "*"
+autoflake = "*"
+mypy = "*"
+jupyterthemes = "*"
+ipywidgets = "*"
+social-app = {path = ".", editable = true}
+
+[packages]
+numpy = "*"
+pandas = "*"
+pika = "*"
+psycopg2-binary = "*"
+scikit-learn = "*"
+scipy = "*"
+sklearn = "*"
+statsmodels = "*"
+pyyaml = "*"
+clickhouse-driver = "*"
+seaborn = "*"
+ruptures = "*"
+streamlit = "*"
+plotly = "*"
+tensorflow-text = "*"
+tf-models-official = "*"
+pydot = "*"
+graphviz = "*"
+transformers = "*"
+torch = "*"
+simpletransformers = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+test="python -m pytest --verbose -s -p no:warnings --cov-report term-missing --cov 'regular_price_elasticity_solver'"
+jupyter="jupyter lab"
+clean_all="python setup.py clean_all"
+bandit="bandit -r ."
